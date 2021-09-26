@@ -12,11 +12,12 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.23</version>
+            <version>42.2.23.jre7</version>
         </dependency>
 
         <dependency>
@@ -24,12 +25,6 @@
             <artifactId>hibernate-core</artifactId>
             <version>6.0.0.Alpha9</version>
             <type>pom</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-java8</artifactId>
-            <version>5.1.0.Final</version>
         </dependency>
 
         <dependency>
