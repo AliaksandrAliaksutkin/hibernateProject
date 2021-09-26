@@ -21,19 +21,16 @@ public class Main {
         User user5 = new User("Vasilii","Vasiliev",37);
 
 
+        userRepository.deleteUser(user);
+        userRepository.deleteByIdUser(3);
+        userRepository.updateUser(user5);
 
+        User user6 = userRepository.findByIdUser(2);
+        userRepository.addUser(user6);
 
+        List<User> list = userRepository.findAll();
+        System.out.println(list);
 
-//        userRepository.createTableUser();
-//
-//        userRepository.addTables(user, address);
-//        userRepository.addTables(user1,address1);
-//        userRepository.addTables(user2,address2);
-//        userRepository.addTables(user3,address3);
-//
-//        userRepository.deleteUserById(uuid11);
-//
-//        List<User> list = userRepository.getUserByHouse(address1.getHouse());
-//        System.out.println(list);
+        userRepository.deleteUsers(list);
     }
 }
