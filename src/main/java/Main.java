@@ -8,7 +8,7 @@ public class Main {
 
         UserRepository userRepository = new UserRepository();
 
-        User user = new User("Ivan","Ivanov",33);
+        User user = new User("Ivanichi","Ivanovichev",33);
         userRepository.addUser(user);
         User user1 = new User("Petr","Petrov",34);
         userRepository.addUser(user1);
@@ -19,7 +19,6 @@ public class Main {
         User user4 = new User("Yakut","SukaOtdohnulOnUebiche!",99);
         userRepository.addUser(user4);
         User user5 = new User("Vasilii","Vasiliev",37);
-
 
         userRepository.deleteUser(user);
         userRepository.deleteByIdUser(3);
