@@ -21,19 +21,14 @@ public class User {
     @Column(name = "age")
     private int age;
 
-    public User(String firstName, String lastName, int age) {
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_address_user")
+    private Address address;
+
+    public User(String firstName, String lastName, int age, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
+        this.address = address;
     }
 }
