@@ -7,6 +7,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+/*класса HibernateSessionFactoryUtil. У него всего одна задача — создавать для нашего приложения фабрику сессий для
+работы с БД (привет, паттерн "Фабрика!").Больше он ничего не умее*/
+
 @Log
 public class HibernateSessionFactoryUtil {
     private static SessionFactory sessionFactory;
