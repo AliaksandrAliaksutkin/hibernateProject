@@ -14,7 +14,7 @@ public class Main {
         userRepository.addUser(user);
 
         User user1 = new User("Petr","Petrov",34,
-                new Address("Beryoza","Lenina",32));
+                new Address("Beryoza","Lenina",52));
         userRepository.addUser(user1);
 
         User user2 = new User("Maksim","Maksimov",35,
@@ -22,7 +22,7 @@ public class Main {
         userRepository.addUser(user2);
 
         User user3 = new User("Michail","Michailov",36,
-                new Address("Beloozersk","Oktybrskaya",134));
+                new Address("Beloozersk","Oktybrskaya",52));
         userRepository.addUser(user3);
 
         User user4 = new User("Yakut","SukaOtdohnulOnUebiche!",99,
@@ -33,16 +33,9 @@ public class Main {
                 new Address("Brest","Kosmonavtov",45));
         userRepository.addUser(user5);
 
-        userRepository.deleteUser(user);
-        userRepository.deleteByIdUser(3);
-        userRepository.updateUser(user5);
+        userRepository.deleteUser(user1);
 
-        User user6 = userRepository.findByIdUser(2);
-        userRepository.addUser(user6);
-
-        List<User> list = userRepository.findAll();
-        System.out.println(list);
-
-        userRepository.deleteUsers(list);
+        List<User> listUser = userRepository.findByHouse(52);
+        System.out.println(listUser);
     }
 }

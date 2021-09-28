@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Setter
 @Getter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
@@ -31,4 +32,5 @@ public class User {
         this.age = age;
         this.address = address;
     }
+
 }
