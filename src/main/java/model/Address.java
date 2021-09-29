@@ -19,7 +19,8 @@ public class Address {
     private String street;
     @Column(name = "house")
     private int house;
-    @OneToOne(mappedBy = "address", orphanRemoval = true)
+    @ManyToOne
+    @JoinColumn(name="id_user", nullable=false)
     private User user;
 
     public Address (String city, String street, int house) {

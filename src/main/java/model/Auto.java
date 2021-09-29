@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Table(name = "user_auto")
 @Entity
 public class Auto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id_auto")
@@ -18,10 +19,10 @@ public class Auto {
     private String color;
     @Column(name = "year_of_issue")
     private int yearOfIssue;
-    @ManyToMany(mappedBy = "auto")
-    @JoinColumn(name = "user_id")
+
+    @ManyToOne
+    @JoinColumn(name="id_user", nullable=false)
     private User user;
-    private Auto auto;
 
     public Auto (String model, String color, int yearOfIssue) {
         this.model = model;

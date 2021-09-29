@@ -23,7 +23,6 @@ public class User {
     private int age;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
-    @JoinColumn(name = "id_address_user")
     private Address address;
     private Auto auto;
 
@@ -32,6 +31,7 @@ public class User {
         this.lastName = lastName;
         this.age = age;
         this.address = address;
+        this.auto = auto;
     }
 
 }
