@@ -12,7 +12,7 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id_address")
-    private int id_address;
+    private int idAddress;
     @Column(name = "city")
     private String city;
     @Column(name = "street")

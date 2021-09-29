@@ -22,11 +22,12 @@ public class User {
     @Column(name = "age")
     private int age;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     @JoinColumn(name = "id_address_user")
     private Address address;
+    private Auto auto;
 
-    public User(String firstName, String lastName, int age, Address address) {
+    public User(String firstName, String lastName, int age, Address address, Auto auto) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
